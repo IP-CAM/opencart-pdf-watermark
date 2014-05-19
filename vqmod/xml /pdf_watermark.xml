@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+        <id>Pdf Watermark</id>
+        <version>1.0</version>
+        <vqmver>2.X</vqmver>
+        <author>Jason Clark (mithereal@gmail.com)</author>
+        <file name="Controller/Account/Download">
+                <operation info="Add pdf watermark">
+                        <search position="after"><![CDATA[
+                        $mask = basename($download_info['mask']);
+                        ]]></search>
+                        <add><![CDATA[
+                        $mime = 'application/octet-stream';
+			$encoding = 'binary';
+
+			//PDFWATERMARK
+			if(preg_match("/\.pdf$/i", $mask)){  
+				$nume = $download_info['mask'];
+				$customfname = $download_info['firstname'];
+				$customlname = $download_info['lastname'];
+				$customemail= $download_info['email'];
+				$customtel = $download_info['telephone'];
+				$cale = DIR_APPLICATION.'controller/account/fpdf/';
+				$docs = DIR_DOWNLOAD;
+				define('FPDF_FONTPATH',$cale.'font/');
+				require($cale.'fpdi.php');
+				require($cale.'mpdf.php');
+			}
+                        ]]></add>
+                </operation>
+                <operation info="Add pdf watermark 2">
+                        <search position="after"><![CDATA[
+                        header('Content-Length: ' . filesize($file));
+                        ]]></search>
+                        <add><![CDATA[
+                       		header('Expires: 0');
+					header('Content-Description: File Transfer');
+					header('Content-Type: ' . $mime);
+					header('Content-Transfer-Encoding: ' . $encoding);
+					header('Content-Disposition: attachment; filename=' . ($mask ? $mask : basename($file)));
+                        ]]></add>
+                </operation>
+        </file>
+</modification>

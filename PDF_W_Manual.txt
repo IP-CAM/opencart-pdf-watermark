@@ -1,0 +1,17 @@
+Installation Guide - PDF Watermark
+
+This modification is for OpenCart Version 1.5x
+
+
+1. Unzip the archive.
+2. copy files in upload to your opencart root.
+
+When your custormers download a PDF file it will watermark each page with a text header and footer.
+The header consists of user details such as their name, email and telephone number.
+The footer contains the date downloaded and a md5 hash of the download details.
+
+Your PDFs will need to have some white space at the top and bottom for the pages for the watermarks to be clearly visible.
+
+
+If you want to change the text colour, font, or text; you're going to have to edit the file /catalog/controller/account/fpdf/mpdf.php by hand. Make sure you back up your files!
+

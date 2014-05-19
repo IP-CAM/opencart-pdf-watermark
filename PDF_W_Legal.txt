@@ -1,0 +1,21 @@
+This PDF watermarker for OpenCart 1.5.x was made possible by the work of 
+
+Joseph "I'm not a programmer" Nadler (joseph@antijoe.com) and
+Niculae "I am a programmer" Dica (niculae.dica@msolutions.ro) and
+Jason Clark (mithereal@gmail.com)
+
+and the original portions are released under the GPLv3.
+
+Niculae Dica is available to write custom mods for OpenCart, and he's very good at it. ;-D
+
+A lot of this mod is based on the work of Chirag Mehta (http://chir.ag/about) which was released under creative commons. 
+His work was in turn created by combining the following three awesome PHP libraries:
+
+   1. FPDF by Olivier Plathey (current version: v1.53) http://www.fpdf.org/
+   2. FPDI by Jan Slabon (current version: v1.1) http://fpdi.setasign.de/
+   3. Barcode by Karim Mribti (current version: v0.0.8a) http://www.mribti.com/barcode/
+
+
+Each of these libraries have their own licensing and copyright/copyleft schemes. For license and legal requirements for each of these libraries, refer to the URLs above.
+
+
