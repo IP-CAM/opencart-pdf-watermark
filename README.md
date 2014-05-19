@@ -8,7 +8,9 @@ Credits
 -------
 
 Author: Joseph Nadler (joseph@antijoe.com) and
+
 Niculae Dica (niculae.dica@msolutions.ro) and
+
 Jason Clark (mithereal@gmail.com)
 
 License
